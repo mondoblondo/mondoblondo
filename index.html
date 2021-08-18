@@ -2,10 +2,35 @@
 <head>
     <meta charset="utf-8">
     <title>testlinks</title>
+    <script type="text/javascript">
+    var windowObjectReference = null; // global variable
+
+    function openFFPromotionPopup() {
+     if(windowObjectReference == null || windowObjectReference.closed)
+     /* if the pointer to the window object in memory does not exist
+     or if such pointer exists but the window was closed */
+
+     {
+     windowObjectReference = window.open("https://online-marketplace-2.testms.lognex.ru/app/#customerorder",
+    "PromoteFirefoxWindowName", "resizable,scrollbars,status");
+     /* then create it. The new window will be created and
+        will be brought on top of any other window. */
+     }
+     else
+     {
+      windowObjectReference.focus();
+       /* else the window reference must exist and the window
+       is not closed; therefore, we can bring it back on top of any other
+       window with the focus() method. There would be no need to re-create
+       the window or to reload the referenced resource. */
+  };
+}
+</script>
 </head>
 <body>
 <div>
-    <a href="https://online-marketplace-2.testms.lognex.ru/app/#customerorder" target="_blank">Заказы покупателей</a><br>
+    <a href="https://online-marketplace-2.testms.lognex.ru/app/#customerorder" target="PromoteFirefoxWindowName"
+    onclick="openFFPromotionPopup(); return false;">Заказы покупателей</a><br>
     <a href="https://online-marketplace-2.testms.lognex.ru/app/#company" target="_blank">Контрагенты</a><br>
 </div>
 </body>

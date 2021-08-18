@@ -5,18 +5,15 @@
 
     <script type="text/javascript">
 
-        function openInNewTab(url) {
-            window.open(url).focus();
+        function clickOnDiv() {
+            document.getElementById('clickableStuff').click();
         }
     </script>
 </head>
 <body>
-<div>
-    <div onclick="openInNewTab('https://online-marketplace-1.testms.lognex.ru/app/#customerorder');"><p>Заказы
-        покупателей через JS</p></div>
+<div onload="clickOnDiv()" id="clickableStuff">
     <a href="https://online-marketplace-1.testms.lognex.ru/app/#customerorder" target="_blank">Заказы
-        покупателей</a><br>
-    <a href="https://online-marketplace-1.testms.lognex.ru/app/#company" target="_blank">Контрагенты</a><br>
+        покупателей обычная ссылка</a>
 </div>
 </body>
 </html>

@@ -12,7 +12,7 @@
 
      {
      windowObjectReference = window.open("https://online-marketplace-2.testms.lognex.ru/app/#customerorder",
-    "PromoteFirefoxWindowName", "resizable,scrollbars,status");
+    "PromoteFirefoxWindowName", "resizable,scrollbars,status, noopener");
      /* then create it. The new window will be created and
         will be brought on top of any other window. */
      }
@@ -29,7 +29,7 @@
 </head>
 <body>
 <div>
-    <a href="https://online-marketplace-2.testms.lognex.ru/app/#customerorder" target="PromoteFirefoxWindowName"
+    <a href="https://online-marketplace-2.testms.lognex.ru/app/#customerorder" target="PromoteFirefoxWindowName" rel="noopener"
     onclick="openFFPromotionPopup(); return false;">Заказы покупателей</a><br>
     <a href="https://online-marketplace-2.testms.lognex.ru/app/#company" target="_blank">Контрагенты</a><br>
 </div>
